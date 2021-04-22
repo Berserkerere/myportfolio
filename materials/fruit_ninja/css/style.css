@@ -1,0 +1,251 @@
+body {
+	padding: 0px;
+	margin: 0px;
+}
+
+#game {
+	background: url(img/234.jpg) no-repeat;
+	width: 600px;
+	height: 400px;
+	margin: 10px auto;
+	position: relative;
+	border: 2px solid #6F6F6F;
+	overflow: hidden;
+}
+
+#game:hover {
+	cursor: url(img/cursor2.png), pointer;
+}
+
+.ball {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left: -100px;
+	top: -100px;	
+	display: block;
+	transition: all 1s;
+	animation: 1s linear 0s normal none infinite running ball;
+	-webkit-animation: 1s linear 0s normal none infinite running ball;
+}
+
+@keyframes ball {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes ball {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.cherry {
+	background: url(img/cherry.png) no-repeat;
+	top: 500px;
+	left: -100px;
+}
+
+.grapes {
+	background: url(img/grapes.png) no-repeat;
+	top: 500px;
+	left: 700px;
+}
+
+.orange {
+	background: url(img/orange.png) no-repeat;
+	top: 500px;
+	left: 175px;
+}
+
+.pear {
+	background: url(img/pear.png) no-repeat;
+	top: 500px;
+	left: 350px;
+}
+
+.bomb {
+	background: url(img/bomb.png) no-repeat;
+	top: 500px;
+	left: 575px;
+}
+
+#stars {
+	font-size: 34px;
+	color: white;
+	font-weight: bold;
+	font-family: 'a_CampusOtl';
+	position: absolute;
+	top: 10px;
+	left: 20px;
+}
+
+#lifes {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+}
+
+#lifes span {
+	width: 32px;
+	height: 32px;
+	background: url(img/lifes.png) no-repeat;
+	display: block;
+	float: left;
+}
+
+#start-block {
+	background: url(img/tort.gif) no-repeat,
+				url(img/back2.jpg) no-repeat;
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#start-button {
+	margin-top: 140px;
+	margin-left: 430px;
+	display: block;
+	font-size: 25px;
+	background: none;
+	color: #FFF;
+	font-family: 'Gang of Three';
+	font-weight: bold;
+	border: none;
+/*	border-bottom: none;
+	border-width: 3px;
+	border-color: #2925C2;
+	border-radius: 50%;*/
+	animation: 10s linear 0s normal none infinite running stbu;
+	-webkit-animation: 10s linear 0s normal none infinite running stbu;
+}
+
+#start-button:hover {
+	cursor: url(img/cursor2.png), pointer;
+}
+
+@keyframes stbu {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes stbu {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#end-button {
+    margin-top: 195px;
+    margin-left: 220px;
+    display: block;
+    padding: 20px 20px;
+    font-size: 25px;
+    background: none;
+    color: #fff;
+    font-family: 'Gang of Three';
+    font-weight: bold;
+}
+
+#title {
+	font-size: 34px;
+	font-family: 'Gang of Three';
+	text-transform: uppercase;
+	padding-left: 30px;
+	padding-top: 0px;
+	color: #FFF;
+}
+
+#gameOver {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(img/gameover.jpg) no-repeat;
+	background-position: center;
+	color: white;
+	text-align: center;
+	font-size: 40px;
+	font-family: 'Gang of Three';
+}
+
+@keyframes slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-3000px, 0, 0);
+  }
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  background-color: #6eace6;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/62127/bg-pdx-mountains.svg");
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: auto 180px;
+}
+
+.wrapper,
+.far,
+.mid,
+.near {
+  min-height: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.far,
+.mid,
+.near {
+  width: 6000px;
+  height: 198px;
+  background-repeat: repeat-x;
+  background-position: left bottom;
+  background-size: 600px 198px;
+  animation: slide linear infinite;
+}
+
+.far {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/62127/bg-pdx-forest-far.svg");
+  animation-duration: 60s;
+}
+
+.mid {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/62127/bg-pdx-forest-mid.svg");
+  animation-duration: 45s;
+}
+
+.near {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/62127/bg-pdx-forest-near.svg");
+  background-size: 600px 158px;
+  height: 158px;
+  animation-duration: 30s;
+}
